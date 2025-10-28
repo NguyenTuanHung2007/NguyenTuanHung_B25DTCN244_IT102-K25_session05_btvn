@@ -6,6 +6,7 @@ int main(){
     const float allowance_2 = 1000000;
     const float allowance_3 = 2000000;
     const float earn_per_day = 160000;
+    const float bonus_per_day = 200000;
     int work_days, occupation;
     printf("Nhap he so luong: ");
     scanf("%f",&salary_coefficient);
@@ -23,7 +24,7 @@ int main(){
         return 1;
     }
     if(work_days > 26){
-        bonus = (work_days - 26) * 200000;
+        bonus = (work_days - 26) * bonus_per_day;
         salary = work_days * earn_per_day * salary_coefficient + allowance_1 + bonus;
     }
     else{
@@ -43,5 +44,6 @@ int main(){
         default:
             printf("Ma nganh nghe khong hop le");
     }
+
 
 }
